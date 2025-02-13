@@ -345,16 +345,11 @@ class Shader
 					Log.warn("Couldn\'t save error message. (${e.message})", null);
 			}
 			#end
+			var errorText:String = "Shader Compile Error!" + '/n' + Std.string(message);
 			if (compileStatus == 0)
-				#if (android && !macro)
-				AndroidTools.showAlertDialog("Shader Compile Error!", message, {name: "OK", func: null}, null)
-				#elseif !ios
-				openfl.Lib.application.window.alert('$message', 'Shader Compile Error!')
-				#else
-				Log.error(message)
-				#end;
-			else if (hasInfoLog)
-				Log.debug(message);
+				FlxG.state.openSubState(new ErrorSubState(errorText));
+			//else if (hasInfoLog)
+			//	Log.debug(message);
 		}
 
 		return shader;
