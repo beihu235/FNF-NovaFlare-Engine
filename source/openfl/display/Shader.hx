@@ -10,7 +10,7 @@ import openfl.display3D.Context3D;
 import openfl.display3D.Program3D;
 import openfl.utils.ByteArray;
 
-import FlxG;
+import flixel.FlxSubState;
 
 /**
 	// TODO: Document GLSL Shaders
