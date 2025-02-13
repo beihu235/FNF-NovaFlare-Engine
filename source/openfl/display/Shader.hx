@@ -10,6 +10,8 @@ import openfl.display3D.Context3D;
 import openfl.display3D.Program3D;
 import openfl.utils.ByteArray;
 
+import FlxG;
+
 /**
 	// TODO: Document GLSL Shaders
 	A Shader instance represents a Pixel Bender shader kernel in ActionScript.
